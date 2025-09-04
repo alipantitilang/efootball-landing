@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Football Showcase</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Font & Icon (contoh: Google Fonts + FontAwesome) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0c6ad17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ================= NAVIGATION ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">IGN_Name</div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#squad">Squad</a></li>
+          <li><a href="#trophy">Trophy</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="hero reveal">
+    <div class="hero-content">
+      <h1>@IGN_Name</h1>
+      <p>Possession Play Maestro ⚽🔥</p>
+      <div class="hero-buttons">
+        <a href="#highlights" class="btn">🎥 Watch Highlights</a>
+        <a href="#contact" class="btn">📩 Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RANK & STATS ================= -->
+  <section id="stats" class="stats reveal">
+    <h2>Rank & Stats</h2>
+    <div class="stats-cards">
+      <!-- Example card -->
+      <div class="card">
+        <h3>Division</h3>
+        <p>Division 1</p>
+      </div>
+      <div class="card">
+        <h3>Win Rate</h3>
+        <p>72%</p>
+      </div>
+      <div class="card">
+        <h3>Matches Played</h3>
+        <p>1023</p>
+      </div>
+    </div>
+    <canvas id="trendChart"></canvas>
+  </section>
+
+  <!-- ================= SQUAD ================= -->
+  <section id="squad" class="squad reveal">
+    <h2>Best Squad</h2>
+    <div class="squad-grid">
+      <!-- Example Player -->
+      <div class="player-card">
+        <img src="assets/images/player1.png" alt="Player Name">
+        <h3>Messi</h3>
+        <p>CF</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TROPHY ================= -->
+  <section id="trophy" class="trophy reveal">
+    <h2>Trophy Cabinet</h2>
+    <div class="trophy-slider">
+      <div class="trophy-card">🏆 Champion Local Tournament 2023</div>
+      <div class="trophy-card">🥈 Runner Up Regional Cup</div>
+    </div>
+  </section>
+
+  <!-- ================= HIGHLIGHTS ================= -->
+  <section id="highlights" class="highlights reveal">
+    <h2>Highlights</h2>
+    <div class="video-carousel">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Highlight 1"></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Highlight 2"></iframe>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="services reveal">
+    <h2>Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Jasa Push Rank</h3>
+        <p>Naik cepat ke Div 1 dengan aman.</p>
+      </div>
+      <div class="service-card">
+        <h3>Coaching</h3>
+        <p>Belajar strategi langsung 1-on-1.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery" class="gallery reveal">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="assets/images/gallery1.jpg" alt="Gallery 1">
+      <img src="assets/images/gallery2.jpg" alt="Gallery 2">
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact reveal">
+    <h2>Contact</h2>
+    <p>Reach me on:</p>
+    <div class="contact-icons">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>&copy; 2025 E-Football Showcase. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

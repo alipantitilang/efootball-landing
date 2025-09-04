@@ -1,0 +1,187 @@
+/* ========== BUTTONS ========== */
+.btn {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.3);
+  transition: 0.3s;
+}
+
+.btn:hover::after {
+  left: 0;
+}
+
+/* ========== CARD EFFECTS ========== */
+.card, .service-card, .player-card, .trophy-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover,
+.service-card:hover,
+.player-card:hover,
+.trophy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,255,153,0.3);
+}
+
+/* ========== TROPHY SLIDER ========== */
+.trophy-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.trophy-slider::-webkit-scrollbar-thumb {
+  background: #00ff99;
+  border-radius: 10px;
+}
+
+.trophy-slider::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* ========== GALLERY HOVER ========== */
+.gallery-grid img {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* ========== NAVBAR ANIMATION ========== */
+.navbar {
+  transition: background 0.3s, padding 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(0,0,0,0.95);
+  padding: 0.7rem 1.5rem;
+}
+
+/* ========== HERO ANIMATION ========== */
+.hero h1, .hero p, .hero-buttons {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.6s; }
+.hero-buttons { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== CONTACT ICONS HOVER ========== */
+.contact-icons a {
+  position: relative;
+}
+
+.contact-icons a::after {
+  content: "";
+  position: absolute;
+  width: 100%; height: 2px;
+  left: 0; bottom: -4px;
+  background: #00ff99;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.contact-icons a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========== NAVBAR LINK FADE ========== */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== HAMBURGER ANIMATION ========== */
+.hamburger.toggle div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.toggle div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Back to top hover */
+#backToTop:hover {
+  background: #fff;
+  color: #00ff99;
+  box-shadow: 0 0 10px #00ff99;
+  transition: 0.3s;
+}
+
+/* Active nav link */
+.nav-links a.active {
+  color: #00ff99;
+  font-weight: bold;
+  border-bottom: 2px solid #00ff99;
+}
+
+/* ========== SCROLL REVEAL ANIMATIONS ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variasi efek */
+.reveal.left {
+  transform: translateX(-40px);
+}
+.reveal.right {
+  transform: translateX(40px);
+}
+.reveal.left.active,
+.reveal.right.active {
+  transform: translateX(0);
+}
+
+.reveal.fade {
+  transform: none;
+  opacity: 0;
+}
+.reveal.fade.active {
+  opacity: 1;
+}
+
+/* Untuk stagger effect */
+.stagger {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.stagger.active {
+  opacity: 1;
+  transform: translateY(0);
+}
