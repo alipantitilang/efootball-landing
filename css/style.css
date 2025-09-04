@@ -31,65 +31,110 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(0,0,0,0.85);
   padding: 1rem 1.5rem;
-  background: rgba(0,0,0,0.8);
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 1000;
+  transition: background 0.3s, padding 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(0,0,0,0.95);
+  padding: 0.7rem 1.5rem;
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
+/* Hamburger */
 .hamburger {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 1001; /* biar di atas menu */
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #f5f5f5;
+  background: #fff;
   border-radius: 2px;
-}
-
-.nav-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 70%;
-  height: 100%;
-  background: #1a1a1a;
-  padding-top: 5rem;
   transition: 0.3s;
 }
 
-.nav-menu ul {
+/* Nav Links */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 70%;
+  background: #111;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: right 0.3s ease-in-out;
 }
 
-.nav-menu ul li {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-.nav-menu ul li a {
+.nav-links li a {
   font-size: 1.2rem;
-  color: #f5f5f5;
+  color: #fff;
   transition: color 0.3s;
 }
 
-.nav-menu ul li a:hover {
+.nav-links li a:hover,
+.nav-links a.active {
   color: #00ff99;
 }
 
-.nav-menu.active {
+.nav-links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #00ff99;
+}
+
+.nav-links.open {
   right: 0;
+}
+
+/* Hamburger Animation */
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    transition: none;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
 }
 
 /* ========== HERO ========== */

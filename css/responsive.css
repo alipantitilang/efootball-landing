@@ -15,6 +15,7 @@
   .hero-buttons {
     flex-direction: row;
     justify-content: center;
+    gap: 1rem;
   }
 
   .stats-cards {
@@ -44,31 +45,23 @@
     padding: 1rem 4rem;
   }
 
-  /* Ubah hamburger jadi horizontal nav */
+  /* Hamburger hilang, nav horizontal */
   .hamburger {
     display: none;
   }
 
-  .nav-menu {
+  .nav-links {
     position: static;
-    background: transparent;
     height: auto;
     width: auto;
-    padding: 0;
-    display: block;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
     transition: none;
   }
 
-  .nav-menu ul {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .nav-menu ul li {
-    margin: 0;
-  }
-
-  .nav-menu ul li a {
+  .nav-links li a {
     font-size: 1rem;
   }
 
